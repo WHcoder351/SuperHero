@@ -7,7 +7,7 @@ pO = "";
 BiO = "";
 
 function player_up() {
-    fabric.Image.fromURL("https://lh5.googleusercontent.com/C-nK92jM7_2kqdY4ofrVtw44fnT1yLXFQQzPm9KcTtu3aRCYY8LEzPNAZwDPtD90LFn3TJdQa_UHQSNcnpLd=w1366-h625-rw", function (Img) {
+    fabric.Image.fromURL("player.png", function (Img) {
         pO = Img;
         pO.scaleToWidth(105);
         pO.scaleToHeight(100);
@@ -69,6 +69,64 @@ function my_KD(e) {
     }
     if (KeyP == '72') {
         new_image("ironman_left_hand.png");
-        console.log("lh");
+        console.log("h");
+    }
+}
+if (KeyP == '38'){
+    u();
+    console.log("up");
+}
+
+if (KeyP == '40'){
+    d();
+    console.log("down");
+}
+if (KeyP == '37'){
+    l();
+    console.log("left");
+}
+
+if (KeyP == '39'){
+    r();
+    console.log("right");
+}
+
+function u(){
+    if(Py >= 0){
+        Py = Py-bH;
+        console.log("block image height = " + bH);
+        console.log("when the up arrow is pressed, x = "+Px+", y ="+Py);
+        canvas.remove(pO);
+        player_up();
+    }
+}
+
+function d(){
+    if(Py <= 0){
+        Py = Py+bH;
+        console.log("block image height = " + bH);
+        console.log("when the down arrow is pressed, x = "+Px+", y ="+Py);
+        canvas.remove(pO);
+        player_up();
+    }
+}
+
+function l(){
+    if(Px >= 0){
+        Px = Px-bH;
+        console.log("block image height = " + bH);
+        console.log("when the left arrow is pressed, x = "+Px+", y ="+Py);
+        canvas.remove(pO);
+        player_up();
+    }
+}
+
+function r(){
+    if(Px <= 0){
+        Px = Px+bH;
+        console.log("block image height = " + bH);
+        console.log("when the right arrow is pressed, x = "+Px+", y ="+Py);
+        canvas.remove(pO);
+        player_up();
     }
 }
