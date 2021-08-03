@@ -1,6 +1,6 @@
-body
+.BB
 {
-    background-image: url("http://moviehole.net/img/avengerswallpaper.jpg");
+    background-image: url("avenger_bg.jpg");
     background-position: center;
     background-size: cover;
 	overflow: hidden;
